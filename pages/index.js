@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -17,6 +18,15 @@ export default function Home() {
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
+        </p>
+
+        <p className={styles.description}>
+          Visit dog breeds page{' '}
+          <Link href="/dogs">
+            <a>
+              <code className={styles.code}>pages/dogs/index.js</code>
+            </a>
+          </Link>
         </p>
 
         <div className={styles.grid}>
@@ -63,5 +73,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
